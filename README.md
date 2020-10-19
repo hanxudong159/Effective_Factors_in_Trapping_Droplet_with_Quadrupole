@@ -1,0 +1,1 @@
+# Effective_Factors_in_Trapping_Droplet_with_Quadrupole
