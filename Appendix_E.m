@@ -1,0 +1,14 @@
+[xgrid,ygrid] = meshgrid(-1.2:0.01:1.2);
+z=sqrt((-(2.* xgrid)./1.2^2.* 2000).^2+((2.* ygrid)./ 1.2^2.* 2000).^2);
+figure;
+pcolor(xgrid,ygrid,z);
+shading interp;
+colorbar;
+colormap(jet);
+xlabel('x(mm)');
+ylabel('y(mm)');
+title('Effective Electric Field Intensity with V = 2000V');
+hold on;
+[cs, h]=contour(xgrid,ygrid,z,[4000 3000 2000 1000 500 0],'w--');
+clabel(cs, h,'LabelSpacing',100, 'FontSize', 10, 'Color', 'k');
+hold off;
